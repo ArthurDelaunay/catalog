@@ -6,7 +6,11 @@ const Home = () => {
         <main>
             <ul>
                 {movies.map((movie) => {
-                    return <li><Link to=`/film/:${movie.id}`movie.title}</li>
+                    return (
+                        <li key={movie.title}>
+                            <Link to={`/film/${movie.id}`}>{movie.title}</Link>
+                        </li>
+                    )
                 })}
             </ul>
         </main>
